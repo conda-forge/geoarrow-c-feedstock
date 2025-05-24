@@ -18,7 +18,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython < 3.1.0                         # [build_platform != target_platform]
+    - cython <3.1.0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -26,7 +26,7 @@ requirements:
     - python
     - setuptools >=61.0.0
     - setuptools-scm
-    - cython < 3.1.0
+    - cython <3.1.0
     - pip
     - libcxx
   run:
