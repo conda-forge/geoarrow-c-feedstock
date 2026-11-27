@@ -1,0 +1,91 @@
+schema_version: 1
+
+context:
+  name: geoarrow-c
+  version: "0.4.0"
+
+recipe:
+  name: ${{ name }}-split
+  version: ${{ version }}
+
+build:
+  number: 4
+
+outputs:
+  - package:
+      name: libgeoarrow-c
+    source:
+      url: https://github.com/geoarrow/geoarrow-c/archive/refs/tags/geoarrow-c-python-${{ version }}.tar.gz
+      sha256: 23ce95cd990deb35fbec9dbf476c4b818ff371d9256f20136d1edf543821639e
+    build:
+      script:
+        file: build-lib
+    requirements:
+      build:
+        - ${{ compiler('c') }}
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib('c') }}
+        - cmake
+        - ninja
+      run_exports:
+        - ${{ pin_subpackage('libgeoarrow-c', upper_bound='x.x.x') }}
+    tests:
+      - script:
+          - if: unix
+            then:
+              - test -f $PREFIX/include/geoarrow/geoarrow.h
+              - test -f $PREFIX/lib/libgeoarrow${SHLIB_EXT}
+          - if: win
+            then:
+              - if not exist %LIBRARY_INC%\\geoarrow\\geoarrow.h exit 1
+              - if not exist %LIBRARY_BIN%\\geoarrow.dll exit 1
+              - if not exist %LIBRARY_LIB%\\geoarrow.lib exit 1
+    about:
+      license_file: LICENSE
+
+  - package:
+      name: geoarrow-c
+    source:
+      url: https://files.pythonhosted.org/packages/source/g/geoarrow-c/geoarrow_c-${{ version }}.tar.gz
+      sha256: 7a3fa543a6578ced143e0fddfdf1149188c5f81c54caf2584ac5c3dc025b9f1d
+    build:
+      script:
+        file: build-python
+    requirements:
+      build:
+        - ${{ compiler('c') }}
+        - ${{ stdlib('c') }}
+        - ${{ compiler('cxx') }}
+        - if: build_platform != target_platform
+          then:
+            - python
+            - cross-python_${{ target_platform }}
+            - cython >=3.1.0
+      host:
+        - python
+        - setuptools >=61.0.0
+        - setuptools-scm
+        - cython >=3.1.0
+        - pip
+        - libcxx
+      run:
+        - python
+        - libcxx
+    tests:
+      - python:
+          pip_check: true
+          imports:
+            - geoarrow.c
+    about:
+      license_file: LICENSE
+
+about:
+  homepage: https://github.com/geoarrow/geoarrow-c
+  repository: https://github.com/geoarrow/geoarrow-c
+  summary: C library and low-level Python bindings for GeoArrow
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - paleolimbot
