@@ -84,6 +84,7 @@ about:
   repository: https://github.com/geoarrow/geoarrow-c
   summary: C library and low-level Python bindings for GeoArrow
   license: Apache-2.0
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
