@@ -1,13 +1,15 @@
 About geoarrow-c-feedstock
 ==========================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geoarrow-c-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/feedstock-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/geoarrow/geoarrow-c
 
 Package license: Apache-2.0
 
-Summary: Low-level Python bindings to the GeoArrow C implementation
+Summary: C library and low-level Python bindings for GeoArrow
+
+Development: https://github.com/geoarrow/geoarrow-c
 
 Current build status
 ====================
@@ -16,8 +18,8 @@ Current build status
 <table><tr>
     <td>GitHub Actions</td>
     <td>
-      <a href="https://github.com/conda-forge/geoarrow-c-feedstock/actions/workflows/conda-build.yml">
-        <img src="https://github.com/conda-forge/geoarrow-c-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      <a href="https://github.com/conda-forge/feedstock-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/feedstock-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -27,108 +29,24 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main">
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/feedstock-feedstock?branchName=main">
           </a>
         </summary>
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64_python3.11.____cpython</td>
+              <td>osx_64</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/feedstock-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.12.____cpython</td>
+              <td>osx_arm64</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.14.____cp314t</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.14.____cp314t" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.15.____cp315</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.15.____cp315" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.15.____cp315t</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.15.____cp315t" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.13.____cp313</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.13.____cp313" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.14.____cp314</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.14.____cp314t</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.14.____cp314t" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.15.____cp315</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.15.____cp315" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.15.____cp315t</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20599&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/geoarrow-c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.15.____cp315t" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/feedstock-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -145,6 +63,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-geoarrow--c-green.svg)](https://anaconda.org/conda-forge/geoarrow-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/geoarrow-c.svg)](https://anaconda.org/conda-forge/geoarrow-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/geoarrow-c.svg)](https://anaconda.org/conda-forge/geoarrow-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/geoarrow-c.svg)](https://anaconda.org/conda-forge/geoarrow-c) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgeoarrow--c-green.svg)](https://anaconda.org/conda-forge/libgeoarrow-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgeoarrow-c.svg)](https://anaconda.org/conda-forge/libgeoarrow-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgeoarrow-c.svg)](https://anaconda.org/conda-forge/libgeoarrow-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgeoarrow-c.svg)](https://anaconda.org/conda-forge/libgeoarrow-c) |
 
 Installing geoarrow-c
 =====================
@@ -163,7 +82,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install geoarrow-c
+conda install geoarrow-c libgeoarrow-c
 ```
 
 </details>
@@ -172,7 +91,7 @@ conda install geoarrow-c
 <summary>With mamba</summary>
 
 ```
-mamba install geoarrow-c
+mamba install geoarrow-c libgeoarrow-c
 ```
 
 </details>
@@ -182,9 +101,9 @@ mamba install geoarrow-c
 
 ```
 # for adding to your local project
-pixi add geoarrow-c
+pixi add geoarrow-c libgeoarrow-c
 # for installing globally
-pixi global install geoarrow-c
+pixi global install geoarrow-c libgeoarrow-c
 ```
 
 </details>
